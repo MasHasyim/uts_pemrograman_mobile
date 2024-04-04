@@ -1,0 +1,30 @@
+name: facultyupnvjtapp
+description: A new Flutter project.
+publish_to: 'none'
+version: 0.1.0
+
+environment:
+  sdk: '>=2.19.6 <3.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  url_launcher: ^6.0.6
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+  - 'assets/agroteknologi.jpg'
+  - 'assets/agribisnis.jpg'
+  - 'assets/arya.jpg'
+  - 'assets/pertanian.jpg'
+  - 'assets/FEB.jpg'
+  - 'assets/Hasyim.jpeg'
+  - 'assets/Ekonomi Pembangunan.jpeg'
+  - 'assets/Akuntansi.png'
+  - 'assets/Manajemen.png'
