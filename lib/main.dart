@@ -1,18 +1,16 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
-
 import 'package:flutter/material.dart';
-import 'package:facultyupnvjtapp/developer.dart';
-import 'package:facultyupnvjtapp/developer_detail.dart';
+import 'package:febprofileapp/developer.dart';
+import 'package:febprofileapp/developer_detail.dart';
 import 'prodi_detail.dart';
 import 'prodi.dart';
-import 'package:facultyupnvjtapp/launch_url.dart';
+import 'package:febprofileapp/launch_url.dart';
 
 void main() {
-  runApp(const FacultyUPNVJTApp());
+  runApp(const FEBProfileApp());
 }
 
-class FacultyUPNVJTApp extends StatelessWidget {
-  const FacultyUPNVJTApp({Key? key}) : super(key: key);
+class FEBProfileApp extends StatelessWidget {
+  const FEBProfileApp({Key? key}) : super(key: key);
 
   static const MaterialColor white = MaterialColor(0xFFFFFFFF, <int, Color>{
     50: Color(0xFFFFFFFF),
@@ -37,126 +35,94 @@ class FacultyUPNVJTApp extends StatelessWidget {
       home: Scaffold(
         appBar: AppBar(
           centerTitle: true,
-          title: Text('FAKULTAS EKONOMI DAN BISNIS UPNVJT'),
+          title: Text(
+            'FAKULTAS EKONOMI DAN BISNIS UPNVJT',
+            style: TextStyle(color: const Color.fromARGB(255, 255, 255, 255)),
+          ),
         ),
-        body: SingleChildScrollView(
-          child: SafeArea(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.stretch,
-              children: [
-                Padding(
-                  padding: EdgeInsets.all(50),
-                  child: Column(
-                    children: [
-                      CircleAvatar(
-                        radius: 50,
-                        backgroundImage: AssetImage('assets/FEB.jpg'),
-                      ),
-                      SizedBox(
-                        height: 10,
-                      ),
-                      Text(
-                        'PROFIL FAKULTAS EKONOMI DAN BISNIS UPNVJT',
-                        style: TextStyle(
-                          fontSize: 18.0,
-                          fontWeight: FontWeight.bold,
+        body: Container(
+          decoration: BoxDecoration(
+            color: Colors.blue.withOpacity(0.5), // Biru tua agak transparan
+          ),
+          child: SingleChildScrollView(
+            child: SafeArea(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                children: [
+                  Padding(
+                    padding: EdgeInsets.all(50),
+                    child: Column(
+                      children: [
+                        CircleAvatar(
+                          radius: 50,
+                          backgroundImage: AssetImage('assets/FEB.jpg'),
                         ),
-                        textAlign: TextAlign.center,
-                      ),
-                      SizedBox(
-                        height: 20,
-                      ),
-                      Text(
-                        'Fakultas Ekonomi Dan Bisnis Universitas Pembangunan Nasional “Veteran” Jatim, merupakan salah satu  Fakultas tertua yang didirikan pada tahun 1956 dan memiliki student body terbanyak dilingkungan Universitas Pembangunan Nasional “Veteran” Jawa Timur.',
-                        style: TextStyle(
-                          fontSize: 14.0,
+                        SizedBox(
+                          height: 10,
                         ),
-                        textAlign: TextAlign.center,
-                      ),
-                      SizedBox(
-                        height: 20,
-                      ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment
-                            .center, // Align children horizontally at the center
-                        children: [
-                          GestureDetector(
-                            onTap: () {
-                              LaunchURL('https://febis.upnjatim.ac.id/');
-                            },
-                            child: Text(
-                              '🌐febis.upnjatim.ac.id',
-                              style: TextStyle(
-                                fontSize: 15,
-                                color: Colors.blue,
+                        Text(
+                          'PROFIL FAKULTAS EKONOMI DAN BISNIS UPNVJT',
+                          style: TextStyle(
+                            fontSize: 18.0,
+                            fontWeight: FontWeight.bold,
+                            color: Color.fromARGB(255, 20, 74, 238),
+                          ),
+                          textAlign: TextAlign.center,
+                        ),
+                        SizedBox(
+                          height: 20,
+                        ),
+                        Text(
+                          'Fakultas Ekonomi Dan Bisnis Universitas Pembangunan Nasional “Veteran” Jatim, merupakan salah satu  Fakultas tertua yang didirikan pada tahun 1956 dan memiliki student body terbanyak dilingkungan Universitas Pembangunan Nasional “Veteran” Jawa Timur.',
+                          style: TextStyle(
+                            fontSize: 14.0,
+                            color: Color.fromARGB(255, 213, 244, 255),
+                          ),
+                          textAlign: TextAlign.center,
+                        ),
+                        SizedBox(
+                          height: 20,
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment
+                              .center, // Align children horizontally at the center
+                          children: [
+                            GestureDetector(
+                              onTap: () {
+                                LaunchURL('https://febis.upnjatim.ac.id/');
+                              },
+                              child: Text(
+                                '🌐febis.upnjatim.ac.id',
+                                style: TextStyle(
+                                  fontSize: 15,
+                                  color: Color.fromARGB(255, 20, 74, 238),
+                                ),
                               ),
                             ),
-                          ),
-                          SizedBox(
-                              width:
-                                  20), // Add some space between the URL texts
-                          GestureDetector(
-                            onTap: () {
-                              LaunchURL('mailto:feb@upnjatim.ac.id');
-                            },
-                            child: Text(
-                              '✉feb@upnjatim.ac.id',
-                              style: TextStyle(
-                                fontSize: 15,
-                                color: Colors.blue,
+                            SizedBox(
+                                width:
+                                    20), // Add some space between the URL texts
+                            GestureDetector(
+                              onTap: () {
+                                LaunchURL('mailto:feb@upnjatim.ac.id');
+                              },
+                              child: Text(
+                                '✉feb@upnjatim.ac.id',
+                                style: TextStyle(
+                                  fontSize: 15,
+                                  color: Color.fromARGB(255, 20, 74, 238),
+                                ),
                               ),
                             ),
-                          ),
-                        ],
-                      ),
-                    ],
-                  ),
-                ),
-                ListView.builder(
-                  shrinkWrap: true,
-                  physics: NeverScrollableScrollPhysics(),
-                  itemCount: Prodi.data.length,
-                  itemBuilder: (BuildContext context, int index) {
-                    return GestureDetector(
-                      onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) {
-                              return ProdiDetail(prodi: Prodi.data[index]);
-                            },
-                          ),
-                        );
-                      },
-                      child: buildProdiCard(Prodi.data[index]),
-                    );
-                  },
-                ),
-                Padding(
-                  padding: EdgeInsets.all(30),
-                  child: Column(
-                    children: [
-                      Text(
-                        'DEVELOP BY',
-                        style: TextStyle(
-                          fontSize: 18.0,
-                          fontWeight: FontWeight.bold,
+                          ],
                         ),
-                        textAlign: TextAlign.center,
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
-                ),
-                SizedBox(
-                  height: 5, // Adjust the height of the author list as needed
-                ),
-                Container(
-                  height: 200,
-                  alignment: Alignment.center,
-                  child: ListView.builder(
-                    scrollDirection: Axis.horizontal,
+                  ListView.builder(
                     shrinkWrap: true,
-                    itemCount: Author.data.length,
+                    physics: NeverScrollableScrollPhysics(),
+                    itemCount: Prodi.data.length,
                     itemBuilder: (BuildContext context, int index) {
                       return GestureDetector(
                         onTap: () {
@@ -164,17 +130,61 @@ class FacultyUPNVJTApp extends StatelessWidget {
                             context,
                             MaterialPageRoute(
                               builder: (context) {
-                                return AuthorDetail(author: Author.data[index]);
+                                return ProdiDetail(prodi: Prodi.data[index]);
                               },
                             ),
                           );
                         },
-                        child: buildAuthorCard(Author.data[index]),
+                        child: buildProdiCard(Prodi.data[index]),
                       );
                     },
                   ),
-                ),
-              ],
+                  Padding(
+                    padding: EdgeInsets.all(30),
+                    child: Column(
+                      children: [
+                        Text(
+                          'DEVELOP BY',
+                          style: TextStyle(
+                            fontSize: 18.0,
+                            fontWeight: FontWeight.bold,
+                            color: Color.fromARGB(255, 20, 74, 238),
+                          ),
+                          textAlign: TextAlign.center,
+                        ),
+                      ],
+                    ),
+                  ),
+                  SizedBox(
+                    height: 5, // Adjust the height of the author list as needed
+                  ),
+                  Container(
+                    height: 200,
+                    alignment: Alignment.center,
+                    child: ListView.builder(
+                      scrollDirection: Axis.horizontal,
+                      shrinkWrap: true,
+                      itemCount: Author.data.length,
+                      itemBuilder: (BuildContext context, int index) {
+                        return GestureDetector(
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) {
+                                  return AuthorDetail(
+                                      author: Author.data[index]);
+                                },
+                              ),
+                            );
+                          },
+                          child: buildAuthorCard(Author.data[index]),
+                        );
+                      },
+                    ),
+                  ),
+                ],
+              ),
             ),
           ),
         ),
@@ -186,6 +196,7 @@ class FacultyUPNVJTApp extends StatelessWidget {
 Widget buildProdiCard(Prodi prodi) {
   return Card(
     elevation: 2.0,
+    color: Colors.blue.withOpacity(0.3),
     shape: RoundedRectangleBorder(
       borderRadius: BorderRadius.circular(10.0),
     ),
@@ -202,10 +213,10 @@ Widget buildProdiCard(Prodi prodi) {
           Text(
             prodi.name,
             style: const TextStyle(
-              fontSize: 15.0,
-              fontWeight: FontWeight.w700,
-              fontFamily: 'Palationo',
-            ),
+                fontSize: 15.0,
+                fontWeight: FontWeight.w700,
+                fontFamily: 'Palationo',
+                color: Color.fromARGB(255, 205, 242, 255)),
           ),
         ],
       ),
@@ -216,6 +227,7 @@ Widget buildProdiCard(Prodi prodi) {
 Widget buildAuthorCard(Author author) {
   return Card(
     elevation: 2.0,
+    color: Colors.blue.withOpacity(0.3),
     shape: RoundedRectangleBorder(
       borderRadius: BorderRadius.circular(10.0),
     ),
@@ -234,6 +246,7 @@ Widget buildAuthorCard(Author author) {
               fontSize: 16.0,
               fontWeight: FontWeight.w700,
               fontFamily: 'Palationo',
+              color: Color.fromARGB(255, 205, 242, 255),
             ),
           ),
         ],

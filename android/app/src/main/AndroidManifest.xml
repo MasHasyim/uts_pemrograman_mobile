@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.facultyupnvjtapp">
+    package="com.example.febprofileapp">
    <application
-        android:label="facultyupnvjtapp"
+        android:label="febprofileapp"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

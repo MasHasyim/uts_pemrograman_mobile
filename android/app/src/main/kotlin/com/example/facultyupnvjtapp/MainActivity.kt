@@ -1,4 +1,4 @@
-package com.example.facultyupnvjtapp
+package com.example.febprofileapp
 
 import io.flutter.embedding.android.FlutterActivity
 

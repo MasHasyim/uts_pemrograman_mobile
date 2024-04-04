@@ -20,15 +20,16 @@ class Author {
       'Kec. Kebomas, Gresik, Jawa Timur',
       '085257859533',
       '22082010011@student.upnjatim.ac.id',
-      'https://github.com/aryaak',
+      'https://github.com/MasHasyim/uts_pemrograman_mobile.git',
       [
         'SMP PROGRESIF BUMI SHALAWAT',
         'SMA PROGRESIF BUMI SHALAWAT',
         'UPN "Veteran" Jawa Timur',
       ],
-      ['JUARA I FUTSAL COMPETITION, KAB.GRESIK',
-      'JUARA IV FUTSAL COMPETITION, KAB.SIDOARJO'],
+      [
+        'JUARA I FUTSAL COMPETITION, KAB.GRESIK',
+        'JUARA IV FUTSAL COMPETITION, KAB.SIDOARJO'
+      ],
     ),
-    
   ];
 }
